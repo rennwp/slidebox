@@ -42,7 +42,7 @@ box.style.top = valuey + "px";
 
 document.addEventListener("keydown", function (e) {
     if (e.key == "d") {
-        if (valuex == 900) {
+        if (valuex == 800) {
             return;
         }
         valuex += 100;
@@ -85,7 +85,10 @@ setInterval(() => {
 
 setInterval(() => {
     if (box.style.top == enemy.style.top) {
-        if (valuex == valueenemy || valuex + 20 == valueenemy || valuex + 40 == valueenemy) {
+        if (valueenemy >= valuex && valueenemy <= valuex + 120) {
+
+            valueyenemy = 0;
+
             score += 10;
             mati();
             scoreText.innerHTML = score;
@@ -113,10 +116,6 @@ ganti.addEventListener("click", function () {
     }
 
 })
-
-
-
-
 
 function mati() {
     if (score == userInput) {
