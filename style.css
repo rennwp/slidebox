@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,64 @@ body {
     background-image: linear-gradient(rgb(144, 144, 255), rgb(203, 203, 255));
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Secular One', sans-serif;
+}
+
+.nav {
+    background-color: pink;
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    left: 0%;
+    z-index: 9999;
+    padding: 20px;
+    transition: all .5s;
+}
+
+.nav span {
+    font-size: 10px;
+}
+
+.skin {
+    cursor: pointer;
+    margin: 50px;
+    text-align: center;
+}
+
+.skin0 {
+    background-color: white;
+}
+
+.skin1 {
+    background-color: yellow;
+    border: 1px solid yellowgreen;
+    box-shadow: 2px -10px 20px lightgreen;
+    border-radius: 10px;
+}
+
+.skin2 {
+    background-color: rgb(92, 92, 255);
+    border: 1px solid red;
+    box-shadow: 2px -5px 70px violet;
+}
+
+.skin3 {
+    background-color: brown;
+    border: 1px solid rgb(121, 1, 1);
+    box-shadow: 2px -10px 100px 10px red;
+    border-radius: 10px;
+}
+
+.navclose {
+    left: -15%;
+}
+
+.nav span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 .container {
@@ -20,9 +80,12 @@ body {
 .box {
     width: 120px;
     height: 20px;
-    background-color: white;
-    position: absolute;
     transition: all 0.3s;
+    z-index: 99;
+}
+
+.player {
+    position: absolute;
 }
 
 .enemy {
@@ -32,6 +95,7 @@ body {
     position: absolute;
     top: 480px;
     left: 100px;
+    transition: all 0.01s;
 }
 
 .score {
@@ -44,8 +108,9 @@ body {
 .detail {
     padding: 10px;
     font-size: 40px;
-    margin: auto;
+    margin: 10px;
     text-align: center;
+    line-height: 70px;
 }
 
 a {
@@ -64,7 +129,6 @@ a:hover {
     right: 20px;
     width: 200px;
     z-index: 999;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     background-color: black;
     color: white;

@@ -5,6 +5,12 @@ const restart = document.getElementById("restart");
 const ganti = document.getElementById("ganti");
 const music = document.getElementById("music");
 const lofi = document.getElementById("lofi");
+const skin0 = document.getElementById("skin0");
+const skin1 = document.getElementById("skin1");
+const skin2 = document.getElementById("skin2");
+const skin3 = document.getElementById("skin3");
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav")
 let valuex = 500;
 let valuey = 100;
 let score = 0;
@@ -97,6 +103,31 @@ setInterval(() => {
     }
 }, 35);
 
+// SKIN LIST
+
+skin0.addEventListener("click", function () {
+    box.classList.remove("skin1", "skin2", "skin3");
+    box.classList.add("skin0")
+})
+
+skin1.addEventListener("click", function () {
+    box.classList.remove("skin0", "skin2", "skin3");
+    box.classList.add("skin1")
+})
+
+skin2.addEventListener("click", function () {
+    box.classList.remove("skin1", "skin0", "skin3");
+    box.classList.add("skin2")
+})
+
+skin3.addEventListener("click", function () {
+    box.classList.remove("skin1", "skin2", "skin0");
+    box.classList.add("skin3")
+})
+
+// AKHIR SKIN LIST
+
+
 restart.addEventListener("click", function () {
     box.style.display = "block";
     enemy.style.display = "block";
@@ -129,3 +160,13 @@ function mati() {
         }
     }
 }
+
+
+// HAMBURGER
+
+hamburger.addEventListener("click", function () {
+    nav.classList.toggle("navclose");
+    console.log("oke")
+});
+
+// AKHIR HAMBURGER
